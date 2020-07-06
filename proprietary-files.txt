@@ -319,10 +319,10 @@ etc/cne/wqeclient/VZW/VZW_profile6.xml
 etc/permissions/cneapiclient.xml
 etc/permissions/com.quicinc.cne.xml
 etc/permissions/ConnectivityExt.xml
-framework/cneapiclient.jar
-framework/com.quicinc.cne.jar
-framework/ConnectivityExt.jar
--priv-app/CNEService/CNEService.apk
+#framework/cneapiclient.jar
+#framework/com.quicinc.cne.jar
+#framework/ConnectivityExt.jar
+#-priv-app/CNEService/CNEService.apk
 vendor/lib64/libcne.so
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneqmiutils.so
@@ -344,9 +344,9 @@ etc/dpm/dpm.conf
 etc/dpm/nsrm/NsrmConfiguration.xml
 etc/permissions/com.qti.dpmframework.xml
 etc/permissions/dpmapi.xml
-framework/com.qti.dpmframework.jar
-framework/dpmapi.jar
-framework/tcmclient.jar
+#framework/com.qti.dpmframework.jar
+#framework/dpmapi.jar
+#framework/tcmclient.jar
 vendor/lib64/libdpmctmgr.so
 vendor/lib64/libdpmfdmgr.so
 vendor/lib64/libdpmframework.so
@@ -567,7 +567,7 @@ etc/firmware/venus-v1.mbn
 etc/firmware/venus-v1.mdt
 
 # Network
--priv-app/QtiTetherService/QtiTetherService.apk
+#-priv-app/QtiTetherService/QtiTetherService.apk
 vendor/lib64/libQtiTether.so
 vendor/lib64/libconnctrl.so
 vendor/lib/libQtiTether.so
@@ -595,8 +595,8 @@ vendor/lib/libperipheral_client.so
 
 # Postprocessing
 etc/permissions/com.qti.snapdragon.sdk.display.xml
-framework/com.qti.snapdragon.sdk.display.jar
--vendor/app/colorservice/colorservice.apk
+#framework/com.qti.snapdragon.sdk.display.jar
+#-vendor/app/colorservice/colorservice.apk
 vendor/bin/mm-pp-daemon
 vendor/lib64/libdisp-aba.so
 vendor/lib64/libmm-als.so
@@ -647,9 +647,9 @@ vendor/lib/libqmiservices.so
 vendor/lib/libsmemlog.so
 
 # Radio
--app/embms/embms.apk
--app/fastdormancy/fastdormancy.apk
--app/shutdownlistener/shutdownlistener.apk
+#-app/embms/embms.apk
+#-app/fastdormancy/fastdormancy.apk
+#-app/shutdownlistener/shutdownlistener.apk
 bin/netmgrd
 bin/qmuxd
 bin/radish
@@ -658,10 +658,10 @@ bin/tftp_server
 etc/permissions/embms.xml
 etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
-framework/embmslibrary.jar
--framework/qcnvitems.jar
--framework/qcrilhook.jar
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+#framework/embmslibrary.jar
+#-framework/qcnvitems.jar
+#-framework/qcrilhook.jar
+#-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/lib64/libconfigdb.so
 vendor/lib64/liblqe.so
 vendor/lib64/libmdmdetect.so
@@ -685,10 +685,10 @@ bin/imscmservice
 bin/imsdatadaemon
 bin/imsqmidaemon
 etc/permissions/imscm.xml
-framework/imscmlibrary.jar
-framework/rcsimssettings.jar
--vendor/app/ims/ims.apk
--vendor/app/imssettings/imssettings.apk
+#framework/imscmlibrary.jar
+#framework/rcsimssettings.jar
+#-vendor/app/ims/ims.apk
+#-vendor/app/imssettings/imssettings.apk
 vendor/lib64/lib-dplmedia.so
 vendor/lib64/lib-ims-rcscmjni.so
 vendor/lib64/lib-imsSDP.so
@@ -736,7 +736,7 @@ vendor/lib64/libthermalioctl.so
 -vendor/lib/libthermalclient.so
 
 # Time services
--app/TimeService/TimeService.apk
+#-app/TimeService/TimeService.apk
 bin/time_daemon
 vendor/lib64/libTimeService.so
 -vendor/lib64/libtime_genoff.so
