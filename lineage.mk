@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/smartron/rimo02a/full_rimo02a.mk)
+$(call inherit-product, device/smartron/rimo02a/lineage_rimo02a.mk)
 
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)

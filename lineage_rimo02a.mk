@@ -15,6 +15,8 @@
 #
 
 # Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from rimo02a device
@@ -22,7 +24,7 @@ $(call inherit-product, device/smartron/rimo02a/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := rimo02a
-PRODUCT_NAME := full_rimo02a
+PRODUCT_NAME := lineage_rimo02a
 PRODUCT_BRAND := Smartron
 PRODUCT_MODEL := T5524
 PRODUCT_MANUFACTURER := Smartron
