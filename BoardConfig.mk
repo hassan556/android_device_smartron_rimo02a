@@ -139,6 +139,7 @@ TARGET_POWERHAL_VARIANT := qcom
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 # RIL
+PROTOBUF_SUPPORTED := true
 TARGET_RIL_VARIANT := caf
 
 # SELinux
@@ -153,15 +154,20 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_rimo02a
 
 # WiFi
 BOARD_HAS_QCOM_WLAN := true
+BOARD_HAS_QCOM_WLAN_SDK := true
 BOARD_WLAN_DEVICE := qcwcn
 BOARD_HOSTAPD_DRIVER := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-WIFI_DRIVER_FW_PATH_AP := "ap"
-WIFI_DRIVER_FW_PATH_STA := "sta"
+#WIFI_DRIVER_FW_PATH_AP := "ap"
+#WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 TARGET_USES_WCNSS_MAC_ADDR_REV := true
+WIFI_DRIVER_OPERSTATE_PATH := "/sys/class/net/wlan0/operstate"
+
+#allow arm64 libhybris
+HYBRIS_MEDIA_32_BIT_ONLY := false
 
 # Inherit the proprietary files
 include vendor/smartron/rimo02a/BoardConfigVendor.mk
