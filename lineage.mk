@@ -22,13 +22,10 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := lineage_rimo02a
 PRODUCT_DEVICE := rimo02a
+PRODUCT_MODEL := T5524
 PRODUCT_MANUFACTURER := Smartron
 PRODUCT_BRAND := Smartron
-PRODUCT_DEVICE := rimo02a
-BOARD_VENDOR := Smartron
 
-TARGET_VENDOR_PRODUCT_NAME := srtphone
-TARGET_VENDOR_DEVICE_NAME := rimo02a
 PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=rimo02a PRODUCT_NAME=srtphone
 
 # Overlays (inherit after vendor/cm to ensure we override it)
