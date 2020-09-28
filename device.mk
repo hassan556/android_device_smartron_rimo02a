@@ -235,6 +235,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/apparmor.d/abstractions/base:system/halium/etc/apparmor.d/abstractions/base \
     $(LOCAL_PATH)/ubuntu/apparmor.d/local/usr.bin.media-hub-server:system/halium/etc/apparmor.d/local/usr.bin.media-hub-server
 
+#Timekeeper
+PRODUCT_PROPERTY_OVERRIDES += \
+    $(LOCAL_PATH)/ubuntu/timekeeper.conf:system/halium/etc/init/timekeeper.conf
+
 # Ubuntu Touch additional packages
 PRODUCT_PACKAGES += \
     libmedia_compat \
@@ -247,7 +251,7 @@ MINIMEDIA_SENSORSERVER_DISABLE := 1
 
 #Ubuntu Touch: USB port handling
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/ubuntu/usb/setupusb:system/halium/usr/share/usbinit/setupusb \
+    $(LOCAL_PATH)/ubuntu/usb/setupusb:system/bin/setupusb \
     $(LOCAL_PATH)/ubuntu/usb/mtp-state.conf:system/halium/etc/init/mtp-state.conf
 
 PRODUCT_COPY_FILES += \
