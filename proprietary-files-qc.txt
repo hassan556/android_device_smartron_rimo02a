@@ -56,13 +56,10 @@ vendor/bin/wcnss_filter
 bin/hvdcp_opti:vendor/bin/hvdcp_opti
 
 # CNE
--priv-app/CNEService/CNEService.apk
 etc/cne/SwimConfig.xml
 etc/cne/andsfCne.xml
 etc/permissions/cneapiclient.xml
 etc/permissions/com.quicinc.cne.xml
-framework/cneapiclient.jar
-framework/com.quicinc.cne.jar
 lib/libvendorconn.so
 lib64/libvendorconn.so
 vendor/bin/cnd
@@ -115,9 +112,6 @@ etc/dpm/dpm.conf
 etc/dpm/nsrm/NsrmConfiguration.xml
 etc/permissions/com.qti.dpmframework.xml
 etc/permissions/dpmapi.xml
-framework/com.qti.dpmframework.jar
-framework/dpmapi.jar
-framework/tcmclient.jar
 lib/com.qualcomm.qti.dpm.api@1.0.so
 lib/com.qualcomm.qti.dpm.api@1.0.so
 lib/libdpmctmgr.so
@@ -156,13 +150,10 @@ vendor/lib64/libssd.so
 vendor/lib64/hw/gatekeeper.msm8952.so
 
 # GPS
--priv-app/com.qualcomm.location/com.qualcomm.location.apk
 -vendor/lib64/libloc_api_v02.so
 etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.xml
 etc/permissions/izat.xt.srv.xml
-framework/com.qti.location.sdk.jar
-framework/izat.xt.srv.jar
 lib64/liblocationservice_jni.so
 lib64/libxt_native.so
 lib64/vendor.qti.gnss@1.0.so
@@ -378,7 +369,6 @@ vendor/lib64/libperipheral_client.so
 -lib/vendor.display.color@1.0.so
 -lib64/vendor.display.color@1.0.so
 etc/permissions/com.qti.snapdragon.sdk.display.xml
-framework/com.qti.snapdragon.sdk.display.jar
 lib/vendor.display.postproc@1.0.so
 lib/vendor.qti.hardware.qdutils_disp@1.0.so
 lib64/vendor.display.postproc@1.0.so
@@ -436,11 +426,6 @@ vendor/lib64/libqmiservices.so
 vendor/lib64/libsmemlog.so
 
 # Radio
--app/QtiTelephonyService/QtiTelephonyService.apk
--framework/QtiTelephonyServicelibrary.jar
--framework/qcrilhook.jar
--framework/qti-telephony-common.jar
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 etc/permissions/qcrilhook.xml
 etc/permissions/telephonyservice.xml
 vendor/bin/netmgrd
@@ -488,8 +473,6 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so
 vendor/radio/qcril_database/qcril.db
 
 # Radio - IMS
--app/ims/ims.apk
--app/imssettings/imssettings.apk
 etc/permissions/qti-vzw-ims-internal.xml
 lib/com.qualcomm.qti.imscmservice@1.0.so
 lib/lib-imscamera.so
@@ -518,7 +501,6 @@ vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
 vendor/bin/imsrcsd
-vendor/framework/qti-vzw-ims-internal.jar
 vendor/lib/com.qualcomm.qti.imscmservice@1.0_vendor.so
 vendor/lib/lib-imscmservice.so
 vendor/lib/lib-imsdpl.so
@@ -563,7 +545,6 @@ vendor/etc/thermal-engine.conf
 vendor/lib64/libthermalioctl.so
 
 # Time services
--vendor/app/TimeService/TimeService.apk
 -vendor/lib/libtime_genoff.so
 -vendor/lib64/libtime_genoff.so
 vendor/bin/time_daemon

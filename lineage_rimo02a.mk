@@ -22,7 +22,7 @@ $(call inherit-product, device/smartron/rimo02a/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := rimo02a
-PRODUCT_NAME := full_rimo02a
+PRODUCT_NAME := lineage_rimo02a
 PRODUCT_BRAND := Smartron
 PRODUCT_MODEL := T5524
 PRODUCT_MANUFACTURER := Smartron
