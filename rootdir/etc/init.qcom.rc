@@ -45,6 +45,9 @@ on init
     # Support legacy paths
     symlink /sdcard /storage/sdcard0
 
+    write /dev/cpuctl/cpu.rt_runtime_us 800000
+    write /dev/cpuctl/cpu.rt_period_us 1000000
+
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
@@ -140,6 +143,8 @@ on boot
 
 on post-fs
     start qseecomd
+    write /proc/sys/kernel/hung_task_timeout_secs 0
+    write /proc/cpu/alignment 4
 
 # msm specific files that need to be created on /data
 on post-fs-data
