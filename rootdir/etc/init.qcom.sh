@@ -116,3 +116,12 @@ fi
     cp /persist/mbn_ota.txt /data/misc/radio/modem_config
     chown radio.radio /data/misc/radio/modem_config/mbn_ota.txt
 echo 1 > /data/misc/radio/copy_complete
+
+
+#Copy wifi files
+cp /system/etc/hostapd/hostapd_default.conf /data/hostapd/hostapd.conf
+cp /system/etc/wifi/p2p_supplicant.conf /data/misc/wifi/p2p_supplicant.conf
+cp /system/etc/wifi/wpa_supplicant.conf /data/misc/wifi/wpa_supplicant.conf
+
+cp /system/etc/hostapd/hostapd.deny /data/misc/wifi/hostapd.accept
+cp /system/etc/hostapd/hostapd.accept /data/misc/wifi/hostapd.deny
