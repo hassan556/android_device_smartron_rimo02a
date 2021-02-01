@@ -228,10 +228,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
 
 #    $(LOCAL_PATH)/ubuntu/ofono.override:system/halium/etc/init/ofono.override \
+ $(LOCAL_PATH)/ubuntu/android.conf:system/halium/etc/ubuntu-touch-session.d/android.conf \
 # Ubuntu Touch
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/70-rimo02a.rules:system/halium/lib/udev/rules.d/70-android.rules \
-    $(LOCAL_PATH)/ubuntu/android.conf:system/halium/etc/ubuntu-touch-session.d/android.conf \
     $(LOCAL_PATH)/ubuntu/touch.pa:system/halium/etc/pulse/touch.pa \
     $(LOCAL_PATH)/ubuntu/config-default.xml:system/halium/usr/share/powerd/device_configs/config-default.xml \
     $(LOCAL_PATH)/ubuntu/apparmor.d/abstractions/base:system/halium/etc/apparmor.d/abstractions/base \
@@ -240,6 +240,11 @@ PRODUCT_COPY_FILES += \
 #Timekeeper
 #PRODUCT_PROPERTY_OVERRIDES += \
     $(LOCAL_PATH)/ubuntu/timekeeper.conf:system/halium/etc/init/timekeeper.conf
+
+# Setup custom emergency number list based on the MCC. This is needed by RIL
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.custom_ecc=1
+
 
 # Ubuntu Touch additional packages
 PRODUCT_PACKAGES += \
