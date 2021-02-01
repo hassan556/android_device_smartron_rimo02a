@@ -547,6 +547,14 @@ on property:init.svc.zygote=restarting
 
 on charger
     start hvdcp_opti
+    start charger_healthd
+
+service charger_healthd /sbin/healthd -c
+    class core
+    critical
+    group root system wakelock
+    disabled
+
 
 service adsprpcd /system/bin/adsprpcd
     class main
