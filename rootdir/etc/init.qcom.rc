@@ -227,7 +227,7 @@ on post-fs-data
     mkdir /data/hostapd 0770 system wifi
 
     # Create /data/time folder for time-services
-    mkdir /data/time/ 0700 system system
+    mkdir /data/time/ 0777 system system
 
     mkdir /data/audio/ 0770 media audio
 
@@ -302,7 +302,7 @@ service dpmd /system/bin/dpmd
     socket dpmd stream 660 root system
     group system readproc
 
-service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
+service irsc_util /system/bin/irsc_util "/etc/sec_config"
     class main
     user root
     oneshot
@@ -508,6 +508,7 @@ service time_daemon /system/bin/time_daemon
    class late_start
    user root
    group root
+   disabled
 
 service audiod /system/bin/audiod
    class late_start
