@@ -33,7 +33,7 @@ TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a53
+TARGET_2ND_CPU_VARIANT := armv8-a
 
 TARGET_USES_64_BIT_BINDER := true
 ENABLE_CPUSETS := true
@@ -251,8 +251,6 @@ WIFI_DRIVER_FW_PATH_STA			:= "sta"
 WPA_SUPPLICANT_VERSION			:= VER_0_8_X
 TARGET_USES_WCNSS_MAC_ADDR_REV		:= true
 
-# OTA Assert
- TARGET_OTA_ASSERT_DEVICE := rimo02a, SRT phone
 
 # inherit from the proprietary version
 -include vendor/smartron/rimo02a/BoardConfigVendor.mk
