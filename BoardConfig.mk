@@ -102,7 +102,7 @@ BOARD_QTI_CAMERA_32BIT_ONLY := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
-BOARD_HEALTHD_CUSTOM_CHARGER_RES := $(PLATFORM_PATH)/charger/images
+BOARD_HEALTHD_CUSTOM_CHARGER_RES := $(DEVICE_PATH)/charger/res/images
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
@@ -171,9 +171,6 @@ WIFI_DRIVER_OPERSTATE_PATH := "/sys/class/net/rndis0/operstate"
 
 #allow arm64 libhybris
 HYBRIS_MEDIA_32_BIT_ONLY := false
-
-#Charging animation
- BOARD_HEALTHD_CUSTOM_CHARGER_RES := $(PLATFORM_PATH)/charger/images
 
 # Inherit the proprietary files
 include vendor/smartron/rimo02a/BoardConfigVendor.mk
