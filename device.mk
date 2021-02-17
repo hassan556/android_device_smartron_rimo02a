@@ -192,6 +192,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.qcom.power.rc \
+    init.recovery.rc \
     init.rimo.rc \
     init.qcom.rc \
     init.qcom.sh \
