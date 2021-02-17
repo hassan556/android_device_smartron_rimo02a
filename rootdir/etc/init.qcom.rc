@@ -510,6 +510,12 @@ service time_daemon /system/bin/time_daemon
    group root
    disabled
 
+service init_wlan_bt /system/bin/sh /system/etc/init_hcismd_up.sh
+    class main
+    user root
+    group root
+    oneshot
+
 service audiod /system/bin/audiod
    class late_start
    user system
