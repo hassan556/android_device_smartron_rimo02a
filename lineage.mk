@@ -26,13 +26,13 @@ PRODUCT_MODEL := T5524
 PRODUCT_MANUFACTURER := Smartron
 PRODUCT_BRAND := Smartron
 
-PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=rimo02a PRODUCT_NAME=srtphone
-
 # Overlays (inherit after vendor/cm to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 PRODUCT_GMS_CLIENTID_BASE := android-smartron
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT="Smartron/srtphone/rimo02a:7.1.2/T5524INDUQK-373/373:user/release-keys"
+    PRODUCT_NAME=rimo02a \
     PRIVATE_BUILD_DESC="rimo02a-user 7.1.2 T5524INDUQK-373 373 release-keys"
+
+BUILD_FINGERPRINT="Smartron/srtphone/rimo02a:7.1.2/T5524INDUQK-373/373:user/release-keys"

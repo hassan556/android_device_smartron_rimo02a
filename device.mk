@@ -61,6 +61,9 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
+    libqomx_core \
+    libmm-qcamera \
+    mm-qcamera-app \
     Snap
 
 PRODUCT_COPY_FILES += \
