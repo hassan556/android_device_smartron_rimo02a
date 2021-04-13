@@ -38,14 +38,14 @@ load-module module-switch-on-port-available
 load-module module-switch-on-connect skip_abstract=yes
 
 ### Automatically load the Pulseaudio Droid
-.ifexists module-droid-card-24.so
-load-module module-droid-card-24 rate=48000 quirks=+unload_call_exit
-.endif
+#.ifexists module-droid-card-24.so
+#load-module module-droid-card-24 rate=48000 quirks=+unload_call_exit
+#.endif
 
 ### Automatically load the audioflinger glue
-.ifexists module-droid-glue-24.so
-load-module module-droid-glue-24
-.endif
+#.ifexists module-droid-glue-24.so
+#load-module module-droid-glue-24
+#.endif
 
 ### Automatically load the trust-store module
 .ifexists module-trust-store.so
@@ -130,6 +130,8 @@ load-module module-console-kit
 load-module module-systemd-login
 .endif
 
+load-module module-droid-discover rate=48000 quirks=+unload_call_exit
+
 ### Enable positioned event sounds
 load-module module-position-event-sounds
 
@@ -154,3 +156,8 @@ load-module module-filter-apply
 ### Make some devices default
 set-default-sink sink.primary
 set-default-source source.primary
+
+### Automatically load the audioflinger glue
+.ifexists module-droid-glue-24.so
+load-module module-droid-glue-24
+.endif

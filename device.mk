@@ -61,9 +61,6 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
-    libqomx_core \
-    libmm-qcamera \
-    mm-qcamera-app \
     Snap
 
 PRODUCT_COPY_FILES += \
@@ -242,21 +239,25 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/apparmor.d/abstractions/base:system/halium/etc/apparmor.d/abstractions/base \
     $(LOCAL_PATH)/ubuntu/apparmor.d/local/usr.bin.media-hub-server:system/halium/etc/apparmor.d/local/usr.bin.media-hub-server
 
-#Timekeeper
-#PRODUCT_PROPERTY_OVERRIDES += \
-    $(LOCAL_PATH)/ubuntu/timekeeper.conf:system/halium/etc/init/timekeeper.conf
-
 # Setup custom emergency number list based on the MCC. This is needed by RIL
-PRODUCT_PROPERTY_OVERRIDES += \
+#PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.custom_ecc=1
 
 
 # Ubuntu Touch additional packages
 PRODUCT_PACKAGES += \
     libmedia_compat \
+    libubuntu_application_api \
+    libcameraservice \
+    libdroidmedia \
+    libcamera_compat_layer \
+    libmedia_compat_layer \
+    libui_compat_layer \
+    libsf_compat_layer \
     minimediaservice \
-    libaudioflingerglue \
+    minisfservice \
     libminisf \
+    libaudioflingerglue \
     miniafservice
 
 MINIMEDIA_SENSORSERVER_DISABLE := 1
