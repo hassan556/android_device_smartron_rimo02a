@@ -238,10 +238,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/apparmor.d/abstractions/base:system/halium/etc/apparmor.d/abstractions/base \
     $(LOCAL_PATH)/ubuntu/apparmor.d/local/usr.bin.media-hub-server:system/halium/etc/apparmor.d/local/usr.bin.media-hub-server
 
-#Timekeeper
-#PRODUCT_PROPERTY_OVERRIDES += \
-    $(LOCAL_PATH)/ubuntu/timekeeper.conf:system/halium/etc/init/timekeeper.conf
-
 # Setup custom emergency number list based on the MCC. This is needed by RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.custom_ecc=1

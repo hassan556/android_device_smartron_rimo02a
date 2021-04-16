@@ -388,12 +388,6 @@ service qti /system/vendor/bin/qti
     user radio
     group radio net_raw qcom_diag usb net_admin
 
-#service sensors /system/bin/sensors.qcom
-#    class late_start
-#    user root
-#    group root
-#    disabled
-
  service sensors /system/bin/sensors.qcom
     class main
     user root
@@ -638,3 +632,8 @@ service minimedia /system/bin/minimediaservice
     ioprio rt 4
 #   hack to make recorded video playback work
     setenv LD_PRELOAD /system/lib/libOmxVdec.so
+
+service miniafservice /system/bin/miniafservice
+    class core
+    user root
+    group audio
